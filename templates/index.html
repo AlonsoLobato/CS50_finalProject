@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <p class="head_title" style="color:#537fbe">ACTIVE PROJECTS</p>
+    <p class="footnote">Click on the column name to sort (a second click will reverse the sort)</p>
+
+    <table id="indextable" class="table table-striped">
+        <thead>
+            <tr>
+                <th><a href="javascript:SortTable(0,'T');" style="color:#537fbe">PROJECT NAME</a></th>
+                <th><a href="javascript:SortTable(1,'T');" style="color:#ea433b">CLIENT NAME</a></th>
+                <th><a href="javascript:SortTable(2,'N');" style="color:#f5b82e">YEAR</a></th>
+                <th><a href="javascript:SortTable(3,'N');" style="color:#2e944b">MONTH</a></th>
+                <th><a href="javascript:SortTable(4,'N');" style="color:#9400D3">PRICE</a></th>
+                <th><a href="javascript:SortTable(5,'T');" style="color:#ffa500">PROJECT STATUS</a></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for project in projects %}
+            <tr>
+                <td>{{ project["Project"] }}</td>
+                <td>{{ project["Client"] }}</td>
+                <td>{{ project["Year"] }}</td>
+                <td>{{ project["Month"] }}</td>
+                <td>{{ project["Price"] }}</td>
+
+                <form action="/" method="post">
+                    <td>
+                        <div class="form-group">
+                            <select class="form-control" name="status">
+                                <option disabled="" selected="" value="">{{ project["Status"] }}</option>
+                                <option value="Waiting for client's action">Waiting for client's action</option>
+                                <option value="Waiting for my action">Waiting for my action</option>
+                                <option value="Waiting for payment">Waiting for payment</option>
+                            </select>
+                        </div>
+                        <td>
+                            <button class="btn btn-primary" type="submit">Update status</button>
+                            <input type="hidden" name="projectId" value="{{ project["ID"] }}">
+                        </td>
+                    </td>
+                </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+
+{% endblock %}
