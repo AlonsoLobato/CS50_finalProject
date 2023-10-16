@@ -17,8 +17,11 @@ Money Funnel is used for tracking project that users may be working on and allow
 3. Finished or paid projects
 
 Users can also see a summary of all projects, sort them by date, client name, price, status, etc.
+
 The web app works based on a database and a set of queries. Depending on these queries (project status) the project would appear in different sections of the webapp.
 
 Money Funnel is free, open source and extensible to suit your personal needs.
+
 Money Funnel was created as final project for CS50, Harvard's intro course to computer science.
+
 See a demo on [this link](https://youtu.be/wDEbUO4AhSo?)
