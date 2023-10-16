@@ -21,4 +21,4 @@ The web app works based on a database and a set of queries. Depending on these q
 
 Money Funnel is free, open source and extensible to suit your personal needs.
 Money Funnel was created as final project for CS50, Harvard's intro course to computer science.
-See a demo on [this link](https://youtu.be/wDEbUO4AhSo?)
+See a demo on [this link](https://youtu.be/wDEbUO4AhSo?){:target="_blank"} 
