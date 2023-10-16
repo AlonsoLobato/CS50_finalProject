@@ -4,10 +4,10 @@ Money Funnel is a project tracking web app in which users can create and categor
 
 ### Technologies used to built this webapp:
 1. Python as general programming language
-2. Flask as web server framework
-3. SQLite as database
-3. HTML and CSS for frontend user interface
-5. Javascript as front end language
+2. Flask as Python framework for web applications backend
+3. SQLite as relational database
+3. HTML and CSS as markup languages for structure and design of user interface
+5. Javascript as frontend language
 
 This project is the Hardvar's CS50 course final project. 
 
